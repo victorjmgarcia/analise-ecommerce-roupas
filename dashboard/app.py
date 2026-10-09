@@ -2,7 +2,12 @@ import pandas as pd
 import plotly.express as px
 from dash import Dash, dcc, html, Input, Output
 
-df = pd.read_csv('ecommerce_estatistica.csv')
+df = pd.read_csv('../dados/ecommerce_estatistica.csv')
+
+# mesmo tratamento do notebook: tira os anuncios duplicados (295 -> 238)
+# e junta a stillger, que estava escrita de dois jeitos
+df = df.drop(columns='Unnamed: 0').drop_duplicates()
+df['Marca'] = df['Marca'].replace('stillger jeans', 'stillger')
 
 # Genero tem 9 categorias e algumas tem poucos produtos, entao juntei em 4 grupos
 grupos = {
