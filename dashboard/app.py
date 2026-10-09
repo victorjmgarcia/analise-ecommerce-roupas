@@ -62,7 +62,7 @@ def cria_graficos(selecao):
     # Spearman porque Qtd_Vendidos_Cod é em faixas (ordinal)
     # Marca_Cod, Material_Cod e Temporada_Cod ficaram fora (sao categorias, nao numeros)
     colunas = ['Nota', 'N_Avaliações', 'Desconto', 'Preço', 'Qtd_Vendidos_Cod']
-    corr = filtro_df[colunas].corr(method='spearman')
+    corr = filtro_df[colunas].corr(method='spearman').rename(index=rotulos, columns=rotulos)
     fig3 = px.imshow(corr, text_auto='.2f', color_continuous_scale='RdBu_r',
                      range_color=[-1, 1], title='Correlação entre as Variáveis (Spearman)')
 
