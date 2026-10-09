@@ -10,6 +10,8 @@ O notebook completo, com código e leitura de cada gráfico, está em [`notebook
 
 Também transformei os gráficos numa aplicação Dash com filtro por público, para quem quiser explorar os dados sem abrir o Python. Código e instruções na pasta [`dashboard/`](dashboard/).
 
+![Dashboard completo](imagens/dashboard_completo.png)
+
 ## Perguntas de negócio
 
 1. Como os preços estão distribuídos?
