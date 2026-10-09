@@ -6,6 +6,10 @@ Projeto desenvolvido no curso de Análise de Dados da EBAC.
 
 O notebook completo, com código e leitura de cada gráfico, está em [`notebooks/analise_ecommerce.ipynb`](notebooks/analise_ecommerce.ipynb).
 
+## Dashboard interativo
+
+Também transformei os gráficos numa aplicação Dash com filtro por público, para quem quiser explorar os dados sem abrir o Python. Código e instruções na pasta [`dashboard/`](dashboard/).
+
 ## Perguntas de negócio
 
 1. Como os preços estão distribuídos?
@@ -50,6 +54,7 @@ O notebook completo, com código e leitura de cada gráfico, está em [`notebook
 - Python 3
 - pandas e NumPy
 - matplotlib e seaborn
+- Plotly e Dash (dashboard interativo)
 - Jupyter Notebook
 
 ## Estrutura do projeto
@@ -58,6 +63,10 @@ O notebook completo, com código e leitura de cada gráfico, está em [`notebook
 analise-ecommerce-roupas/
 ├── dados/
 │   └── ecommerce_estatistica.csv
+├── dashboard/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── README.md
 ├── imagens/
 │   └── gráficos exportados do notebook
 ├── notebooks/
@@ -68,12 +77,24 @@ analise-ecommerce-roupas/
 
 ## Como executar
 
+Notebook:
+
 ```bash
 git clone https://github.com/victorjmgarcia/analise-ecommerce-roupas.git
 cd analise-ecommerce-roupas
 pip install -r requirements.txt
 jupyter notebook notebooks/analise_ecommerce.ipynb
 ```
+
+Dashboard:
+
+```bash
+cd dashboard
+pip install -r requirements.txt
+python app.py
+```
+
+Depois é só abrir http://127.0.0.1:8050 no navegador.
 
 ## Próximos passos
 
